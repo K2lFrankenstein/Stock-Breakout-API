@@ -91,9 +91,14 @@ def calculate_breakouts(stock_data,extended_data,input_data):
             "Return_%": return_pct
         })
 
-    # Convert breakouts list to a DataFrame for better display
-    breakouts_df = pd.DataFrame(breakouts)
-    breakouts_df.set_index("Breakout_Date", inplace=True)
+    # Create DataFrame for breakouts
+    if breakouts:
+        breakouts_df = pd.DataFrame(breakouts)
+        breakouts_df.set_index("Breakout_Date", inplace=True)
+    else:
+        # Create an empty DataFrame with appropriate columns if no breakouts
+        breakouts_df = pd.DataFrame(columns=["Buy_Price", "Sell_Date", "Sell_Price", "Return_%"])
+        breakouts_df.index.name = "Breakout_Date"
     
     # Create new columns in stock_data for breakout information
     stock_data[('Sell_Date', '')] = np.nan
