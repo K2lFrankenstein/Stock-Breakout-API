@@ -38,8 +38,8 @@ Use this endpoint to analyze stock data and generate reports.
 ```json
 {
     "ticker": "AAPL",
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31",
+    "start_date": "2019-01-01",
+    "end_date": "2024-12-27",
     "volume_threshold": 200,
     "price_change_threshold": 2,
     "holding_period": 10
@@ -53,10 +53,10 @@ Use this endpoint to analyze stock data and generate reports.
 
 - Tickers Analyzed: AAPL, TSLA, ACM, ACI, AAL
   - **AAPL**: 2 breakouts, both negative with a maximum loss of -5%. Total return: **-7.8%**.
-  - **TSLA**: 3 breakouts, 2 negative (max loss -5%) and 1 positive (5.9%). Total return: **-7.8%**.
-  - **ACM**: 3 breakouts, mostly negative with a maximum loss of -10% and one positive (2%). Total return: **-10.2%**.
-  - **ACI**: 12 breakouts, mixed with both positive and negative returns capped at 3%. Total return: **-7.6%**.
-  - **AAL**: 8 breakouts, mostly negative with a maximum loss of -10% and one positive (7%). Total return: **-29.78%**.
+  - **TSLA**: 3 breakouts, 2 negative (max loss -5%) and 1 positive (5.9%). Total return: **-1.8%**.
+  - **ACM**: 3 breakouts, mostly negative with a maximum loss of -10% and one positive (2%). Total return: **-7.45%**.
+  - **ACI**: 12 breakouts, mostaly positive return and negative returns capped at -3%. Total return: **24.3%**.
+  - **AAL**: 8 breakouts, mostly negative with a maximum loss of -10% and one positive (7%). Total return: **-22.47%**.
 
 #### **General Insights**:
   - Breakouts were sparse, but returns were moderate and mixed.
@@ -68,7 +68,7 @@ Use this endpoint to analyze stock data and generate reports.
 - **Objective**: Analyze stock performance using breakout signals.
 - **Insights**: Evaluate whether breakout signals provide meaningful trading opportunities.
 - **Future Enhancements**:
-  - Incorporate additional filters such as RSI or MACD indicators.
+  - Incorporate additional filters.
   - Visualize breakout events with chart
   - Support batch processing of multiple tickers simultaneously.
 
